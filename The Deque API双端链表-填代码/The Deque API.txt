@@ -1,0 +1,75 @@
+The Deque API
+The double ended queue is very similar to the SLList and AList classes that we've discussed in class. Here is a definition from cplusplus.com.
+Deque (usually pronounced like "deck") is an irregular acronym of double-ended queue. Double-ended queues are sequence containers with dynamic sizes that can be expanded or contracted on both ends (either its front or its back).
+Specifically, any deque implementation must have exactly the following operations:
+• public void addFirst(T item: Adds an item of type to the front of the deque. You can assume that is never null.
+• public void addLast(T item): Adds an item of type T to the back of the deque. You can assume that ite is never null.
+• public boolean isEmpty() : Returns true if deque is empty, false otherwise.
+• public int size() : Returns the number of items in the deque.
+• public void printDeque() : Prints the items in the deque from first to last, separated by a space. Once all the items have been printed, print out a new line.
+• public T removeFirst() : Removes and returns the item at the front of the deque. If no such item exists, retu null.
+• public T removeLast () : Removes and returns the item at the back of the deque. If no such item exists, retur
+nu11.
+• public T get (int index): Gets the item at the given index, where 0 is the front, 1 is the next item, and so fo If no such item exists, returns null). Must not alter the deque!
+In addition, we also want our two deques to implement these two special methods:
+
+In addition, we also want our two deques to implement these two special methods:
+· public Iterator<T> iterator(): The deques objects we'll make are iterable (i.e. Iterable<T>) so we must
+provide this method to return an iterator.
+· public boolean equals(Object 0): Returns whether or not the parameter o is equal to the deque.
+considered equal if it is a deque and if it contains the same contents (as determined by the generic T's equals
+method) in the same order. (You'll need to use the instance of keywords for this. Read here for more
+information)
+You should not have your Deque interface implement Iterable ; instead the two implementations
+LinkedListDeque and ArrayDeque should implement Iterable in Project 1c. If you do the former, or if you
+implement Iterable in 1a or 1b, our autograder will give you API errors. We know this is less than optimal, but
+it's a constraint of the grader.
+Additionally, you'll learn what an Iterator is in Lecture 11 (09/19), so don't worry about it right now. In fact, don't do it
+until the Project 1c grader, or your code will receive an API penalty. (We know that this doesn't make sense, but it's
+difficult to fix.) This project is meant to be done little by little as you learn more things from lecture and discussion, and
+it's a fantastic opportunity to practice all the things you learn in this course.
+Your class should accept any generic type (not just integers). For information on creating and using generic data
+structures, see lecture 5. Make sure to pay close attention to the rules of thumb on the slides about generics.
+In this project, you will provide two implementations for the Deque interface: one powered by a Linked List, and one by a
+resizing array
+
+
+1. Linked List Deque
+This section of the spec describes the Project 1a autograder.
+Create a file called LinkedListDeque. java in your proj1/deque directory. Make sure you declare that it is in the
+deque package using the special package keyword.
+As your first deque implementation, you'll build the LinkedListDeque class, which will be Linked List based.
+For this class, you'll need to implement the following methods (see "The Deque APl" above for descriptions of the fi
+10 methods)
+· public void addFirst(T item)
+· public void addLast(T item)
+public boolean isEmpty()
+· public int size()
+· public void printDeque()
+· public T removeFirst()
+· public T removelast()
+public T get(int index)
+· public boolean equals(Object o)
+· public LinkedListDeque(): Creates an empty linked list deque.
+· public T getRecursive(int index): Same as get, but uses recursion.
+You may add any private helper classes or methods in LinkedListDeque. java if you deem it necessary. If you do,
+please add helpful Javadoc comments for your and your TAs sake.
+
+
+Your operations are subject to the following rules:
+add
+and remove
+operations must not involve any looping or recursion. A single such operation must take
+"constant time", i.e. execution time should not depend on the size of the deque. This means that you cannot use loops that go over all/most elements of the deque.
+get must use iteration, not recursion. size must take constant time.
+• Iterating over the
+LinkedListDeque
+using a for-each loop should take time proportional to the number of items.
+• Do not maintain references to items that are no longer in the deque. The amount of memory that your program uses at any given time must be proportional to the number of items. For example, if you add 10,000 items to the deque, and then remove 9,999 items, the resulting memory usage should amount to a deque with 1 item, and not 10,000. Remember that the Java garbage collector will "delete" things for us if and only if there are no pointers to that object.
+There are many design issues to consider in this part of the project, and you may find the implementation more challenging than you'd expect.
+Make sure to consult the lecture on doubly linked lists, particularly the slides on sentinel nodes: two sentinel topology., and circular sentinel topology. I prefer the circular approach.
+You are not allowed to use Java's built in
+LinkedList
+data structure (or any data structure from java.util.*)
+in your implementation and the autograder will instantly give you a 0 if we detect that you've imported any such data structure. The exceptions are Iterator,
+Iterable, and Comparator.

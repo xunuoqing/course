@@ -1,0 +1,27 @@
+String Refinement
+Fill in the refineStringArray method so that it returns an array of all the Strings in the given array that have length greater or equal to the length of a given string. If the array is null or empty, or the given string is null, return null. The output strings should be in the same order they appear in the original array. Note that if the array contains any null element, then you need to skip that null element.
+
+
+字符串细化
+填写refineStringArray方法，使其返回给定数组中所有长度大于或等于给定字符串长度的字符串数组。如果数组为空或空，或者给定的字符串为空，则返回空。输出的字符串应该与它们在原始数组中出现的顺序相同。注意，如果数组包含任何空元素，那么你需要跳过这个空元素。
+
+
+Note that to complete this task you are not allowed to use any collections (e.g. ArrayList, LinkedList, List, Set, Map etc.) other than array. If you are found to use any collections other than array, you will lose 25% of your marks.
+
+
+请注意，为了完成这项任务，你不允许使用除数组以外的任何集合（如ArrayList、LinkedList、List、Set、Map等）。如果你被发现使用了除数组以外的任何集合，你将失去25%的分数。
+
+
+Example 1
+refineStringArray (new String[] {"Hello World", "a", "abc"}, "oop")
+should return
+{"Hello World", "abc"}
+Example 2
+refineStringArray (new String[] {"a", "ab", "abc"}, "java")
+should return
+{}
+Example 3
+refineStringArray (new String[] {"Hello World", "a", "abc"}, null)
+should return
+null
+Note that to complete this task you are not allowed to use any collections (e.g. ArrayList, LinkedList, List, Set, Map etc.) other than array. If you are found to use any collections other than array, you will lose 25% of your

@@ -1,0 +1,39 @@
+Understanding UML
+Create the following classes based on the given UML diagrams.
+Actor
+Actor
+- name: String
+- dateOfBirth: LocalDate
+- movies: Movie l] + getName(): String + getBirthDate(): LocalDate + getMovies(): Movie[]
+Actor (name, birthDate, movies)
+Studio
+Studio
+- name: String
+- location: String
+- movies: Movie l] + getName(): String + getLocation): String + getMovies(): Moviel]
+Studio (name, location, movies)
+Movie
+Movie
+- name: String
+- studio: Studio
+- releaseDate: LocalDate
+- genre: String
+- actors: Actor|]
++ getName(): String + getStudio): Studio + getReleaseDate(): LocalDate + getGenre(): String + getActors): Actorli
++ getStudioLocation): String + copyrighted): boolean
+Movie (name, studio, releaseDate, genre, actors)
+copyrighted) returns whether the film is still under copyright. Copyright expires 75 years after release.
+MovieStore
+MovieStore
+- name: String
+- location: String
+- movies: Map<Movie, Integer> + getName(): String + getLocation): String + getMovies): Map<Movie, Integer> + addMovie(movie: Movie): void + rentMovie(movie: Movie): boolean + getMoviesByGenre(genre: String): ArrayList<Movie> + getMoviesWithActors(actors: Actor[]): HashSet<Movie>
++ getMoviesByStudio(studioName: String): Moviell + getMoviesWithoutCopyright): LinkedList<Movie>
+MovieStore (name, location)
+addMovie(movie) adds a movie to the collection. If the movie is already there, increment the number of copies that exist by 1.
+rentMovie(movie) removes a copy of the movie and returns true. If there are no copies available, return false.
+getMoviesByGenre(genre) returns the array of movies that have the specified genre.
+geMovies WithActors(actors) returns the array of movies with all of the given actors.
+getMoviesByStudio(studio) returns the array of movies produced by the given studio.
+getMoviesWithoutCopyright returns the array of movies that have exceeded their copyright.
+NB: Some test cases check for defensive programming. If an invalid parameter is given as an argument to a method that returns void, do nothing. If the method returns a Reference type, return null. If the method returns a boolean, return

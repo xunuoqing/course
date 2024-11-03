@@ -1,0 +1,37 @@
+Many applications areas such as computer graphics, geographic information systems, and VLSI design 
+require the ability to store and query a collection of rectangles. In 2D, typical queries include the ability 
+to find all rectangles that cover a query point or query rectangle, and to report all intersections from 
+among the set of rectangles. Adding and removing rectangles from the collection are also fundamental 
+operations. For this project, you will create a simple spatial database for handling inserting, deleting, 
+and performing queries on a collection of rectangles. The data structure used to store the collection will 
+be the Skip List The Skip List fills the same role as a Binary Search Tree in applications that need to 
+insert, remove, and search for data objects based on some search key such as a name. The Skip List is 
+roughly as complex as a BST to implement, but it generally gives better performance since its worst case 
+behavior depends purely on chance, not on the order of insertion for the data. Thus, the Skip List 
+provides a good organization for answering non-spatial queries on the collection (in particular, for 
+organizing the objects by name). However, as you will discover, it is difficult and inefficient for the Skip 
+List to accomplish spatial queries.
+Design Considerations 
+The rectangles will be maintained in a Skip List, sorted by the name. Use compareTo() to determine the 
+relative ordering of two names, and to determine if two names are identical. You are using the Skip List 
+to maintain your list of rectangles, but the Skip List is a general container class. Therefore, it should not 
+be implemented to know anything about rectangles. Be aware that for this project, the Skip List is being 
+asked to do two things. First, the Skip List will handle searches on rectangle name, which acts as the 
+record’s key value. The Skip List can do this efficiently, as it will organize its records using the name as 
+the search key. But you also need to do several things that the Skip List cannot handle well, including 
+removing by rectangle shape, doing a region search, and computing rectangle intersections. So you will 
+need to add functions to the Skip List to handle these actions. Make sure you handle these actions in a 
+general way that does not require the Skip List to understand its data type. The biggest implementation 
+difficulty that you are likely to encounter relates to traversing the Skip List during the intersections 
+command. The problem is that you need to make a complete traversal of the Skip List for each rectangle 
+in the Skip List (comparing it to all of the other rectangles). This leads to the question of how do you 
+remember where you are in the “outer loop” of the operation during the processing of the “inner loop” 
+of the operation. One design choice is to augment the Skip List with an iterator class. An iterator object 
+tracks a current position within the Skip List, and has a method that permits the position of the iterator 
+object within the Skip List to move forward. In this way, one iterator object can be tracking the current 
+rectangle in the “outer loop” of the process, while a second iterator can be used to track the current 
+rectangle for the “inner loop.” For the regionsearch and intersections commands, you need to 
+determine intersections between two rectangles. Rectangles whose edges abut one another, but which 
+do not overlap, are not considered to intersect. For example, (10, 10, 5, 5) and (15, 10, 5, 5) do NOT 
+overlap, while (10, 10, 5, 5) and (14, 10, 5 5) do overlap. Note that rectangles (10, 10, 5, 5) and (11, 11, 1, 
+1) also overlap

@@ -1,0 +1,37 @@
+Goals Practice the use of objects and Arrays or Array List and design simple algorithms through program
+ming a game of blackjack
+Requirements Write a Java program that implements a game of blackjack as follows :
+·The program deals two cards randomly from a deck of cards to both the player and itself.
+·The player then chooses to hit or stand until he/she is either bust(over 21)or decides to stand.
+·The dealer(program)hits and stands according to the following rules:
+If the dealer's hand is less than 17, it hits
+If the dealer's hand is 17 or more it stands
+Of course, if the dealer's hand is greater than 21, it loses
+· If the player and dealer tie, then the dealer wins.
+·All face cards(Jack,Queen,King)are worth 10 points.
+· The Ace has two possible values on which every one is more ond to the
+player or dealer.
+·For simplicity,we will not implement the blackjack rule
+· At the end of the hand, the deck should be reset and the game starts again, until the user signals the
+game to end (by hitting escape, for instance)
+Starter code is provided, which has a main method that handles user interactions. You need to fill in the
+·public static void buildDeck(ArrayList<Card>Deck)
+This should build a standard deck of 52 playing cards assigned to the ArrayList Deck
+public static void initial deck, ArrayList<Card)
+This should deal two cards from the given deck into each of the given hands
+·public static void dealOne(ArrayList<Card>deck,ArrayList<Card>hand)
+This should deal a single card from the deck to the hand
+· public static boolean check Bust(Array List<Card> hand)
+This should return true if the sum of the values of the cards in the hand is greater than 21, and false
+otherwise
+· public static boolean dealerTurn(Array List<Card> deck, ArrayList<Card> hand)
+Ins method should handle the dealer's turn, making the appropr
+
+·public static int whoWins(ArrayList<Card>playerHand,ArrayList<Card>dealerHand)
+Given two hands, this method should compare the sums of their card values and decide which hand is
+greater. Return 1 if the playerHand is greater and 2 if the dealerHand is greater.
+· public static String displayCard(ArrayList<Card> hand)
+This should return a string describing the card with index 1 (the second card).
+· public static String display Hand(ArrayList<Card> hand)
+Similar to display Card, but this will return a string which describes all of the cards in the given hand,
+separated by a space.

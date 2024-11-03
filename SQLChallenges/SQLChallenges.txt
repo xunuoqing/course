@@ -1,0 +1,95 @@
+Schemas
+The questions in this challenge are based on the Mining database schema shown in the diagram below. You can click the diagram to see a larger version of the diagram. n the above diagram, primary key attributes are shown in bold and underlined; foreign key attributes are dashed-underlined and with an arrow pointing to the referenced table. 
+Company(id INTEGER, name VARCHAR(60), url VARCHAR(200),
+      country CHAR(3)  -- country code
+      government_agency  CHAR(1) -- 'Y' or 'N'
+);
+
+Infrastructure(entryNo INTEGER, name VARCHAR(50), state VARCHAR(3), status VARCHAR(20));
+
+Port(entryNo INTEGER, maxShips INTEGER, description VARCHAR(200));
+
+ProcessingPlant(entryNo INTEGER, kind VARCHAR(50), description VARCHAR(200));
+
+Mine(entryno INTEGER,
+   significant CHAR(1) -- 'Y' or 'N'
+);
+
+Commodity(comId VARCHAR(5), name VARCHAR(50));
+
+Operates(owner INTEGER, place INTEGER);
+
+Produces(mine INTEGER, commodity VARCHAR(5), capacity INTEGER);
+
+Processes(plant INTEGER, commodity VARCHAR(5), capacity INTEGER);
+
+
+Write a SQL query that determines how many ports in Western Australia
+("WA') are listed in the MiningDB database.
+
+
+Challenge 2
+Write a SQL query to find the number of processing plants in South
+Australia(SA) that have an unknown capacity in the MiningDB databa
+Note: make sure that you count each processing plant only once.
+
+
+Challenge 3
+Write a SQL query to list the name of all 'Oil Refinery' plants in Victoria
+("VIC) in alphabetical order.
+
+
+Challenge 4
+Write an SQL query that lists each commodity (only by short-name, ie. the
+commodity ID) that is processed in a processing plant, and for each
+commodity the corresponding count of plants where such commodities
+are processed. Your query result should have two columns:
+·commodity-each commodity processed in some plant;
+· count - a count of how many plant processing this commodity.
+The result shall be listed in descending order of the counts (the most
+commonly processed commodity shall be listed first); all commodities with
+the same count shall be further ordered alphabetically. Only list
+commodities that are processed in at least one plant.
+
+
+Challenge 5
+Write an SQL query that lists the names of all ports with less than 8 ship
+berths (as defined with the maxShips attribute) in South Australia (SA) in
+alphabetical order.
+
+
+
+Challenge 6
+Write an SQL query that lists the states (by shortname) and per each state
+the average and the maximum size (maxShips) of the ports in that state
+with status 'Operating'. States without any operating ports should not be
+included. Your query result should have the following three columns:
+·state-state with at least one operating port;
+·avg_size-the average port size per state state;
+·max_size-the largest port size(according to maxShips)per state.
+The result shall be listed in alphabetical order of the states.
+
+
+
+Challenge 7
+Write an SQL query that lists the states (in alphabetical order) and per
+each state the total capacity of its Diamond mines (both undifferentiated
+diamonds ('Dmd') and gems ('Dmdg')). Only include states with at least 3
+distinct diamond mines.
+
+
+Challenge 8
+Write a SQL query to find the total capacity of all the "Operating"
+processing plants owned by each company. If the processing plants
+owned by a company has no capacity, remove those from the output.
+
+
+Challenge 9
+Write a SQL query to find the names of the processing plants that process
+both Cobalt("Co) and Sugar bean('Sb').
+
+
+Challenge 10
+Write a SQL query to find the country whose ports have the highest
+average shipment capacity. Note that shipment capacity of a port is
+defined as 'maxShips' in the Port entity set.

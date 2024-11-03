@@ -1,0 +1,329 @@
+Testing Outline 
+Name: Your name
+ID: Your student id
+
+
+Notes:
+Should follow the following template.
+Must be sorted alphabetically by classname and then methodname. 
+This document must be TEXT only (eg not doc, rtf, gif etc..)
+======================
+Class: 
+Method: 
+Testing For:
+Argument:
+Expected Result:
+======================
+
+
+Sample Version
+======================
+Class: Library
+Method: String GetBookAuthor(String bookname)
+Testing For: Book that doesn't exist
+Argument: bookname="No Book"
+Expected Result: Null returned
+======================
+
+
+Your tests should appear below
+
+
+
+=====================
+Testing Outline
+=====================
+Invalid arguments passed:Durablity outside 0-100 Range
+Should output somewhere between 10 and 50:35.817547
+Should return 10:10.0
+Should return 10:10.0
+Repair Bots Exhausted
+Should return between 100 and 500:391.04553
+Should return zero:0.0
+Should be 0:0.0
+Should be 800:800.0
+
+
+
+
+
+
+Dogo Health Should be 25
+MechaMosnter
+Name=Dogo
+Current HitPoints=25.0
+Max HitPoints=40.0
+Status=ALIVE
+Repair Item=null
+Weapon=null
+Armor=null
+RangedWeapon [name=Small gun, durability=100.0, minDamage=30.0, maxDamage=50.0, radius=10.0]
+RangedWeapon [name=Average gun, durability=100.0, minDamage=40.0, maxDamage=60.0, radius=15.0]
+RangedWeapon [name=Small gun, durability=100.0, minDamage=30.0, maxDamage=50.0, radius=10.0]
+WildMonster
+Name=Lion
+Current HitPoints=50.0
+Max HitPoints=50.0
+Status=ALIVE
+Damage=20
+
+
+ArmoredWild
+Name=Dragon
+Current HitPoints=200.0
+Max HitPoints=300.0
+Status=ALIVE
+Armor=Armor [name=Vital Shield, durability=100.0, weight=5.0, protection=200.0]
+
+
+MechaMosnter
+Name=Mothem
+Current HitPoints=70.0
+Max HitPoints=80.0
+Status=ALIVE
+Repair Item=null
+Weapon=Item{durability=100.0, weight=5.0}
+Armor=Armor [name=Scrappy Shield, durability=100.0, weight=5.0, protection=200.0]
+
+
+MechaMosnter
+Name=Tyrantzard
+Current HitPoints=500.0
+Max HitPoints=700.0
+Status=ALIVE
+Repair Item=null
+Weapon=Item{durability=100.0, weight=5.0}
+Armor=Armor [name=Advanced Shield, durability=100.0, weight=5.0, protection=200.0]
+
+
+Lets Simulate a Battle Between Dragon and Mothem
+Note this is probably the hardest part to do so don't stress about it
+Get this working last after your structure etc.. is working
+And yes, the armor is really strong in this game!
+Dragon Health/Armor:  200.0/99.0
+Mothem Health/Armor:  70.0/99.0
+Dragon Health/Armor:  200.0/98.0
+Mothem Health/Armor:  70.0/98.0
+Dragon Health/Armor:  200.0/97.0
+Mothem Health/Armor:  70.0/97.0
+Dragon Health/Armor:  200.0/96.0
+Mothem Health/Armor:  70.0/96.0
+Dragon Health/Armor:  200.0/95.0
+Mothem Health/Armor:  70.0/95.0
+Dragon Health/Armor:  200.0/94.0
+Mothem Health/Armor:  70.0/94.0
+Dragon Health/Armor:  200.0/93.0
+Mothem Health/Armor:  70.0/93.0
+Dragon Health/Armor:  200.0/92.0
+Mothem Health/Armor:  70.0/92.0
+Dragon Health/Armor:  200.0/91.0
+Mothem Health/Armor:  70.0/91.0
+Dragon Health/Armor:  200.0/90.0
+Mothem Health/Armor:  70.0/90.0
+Dragon Health/Armor:  200.0/89.0
+Mothem Health/Armor:  70.0/89.0
+Dragon Health/Armor:  200.0/88.0
+Mothem Health/Armor:  70.0/88.0
+Dragon Health/Armor:  200.0/87.0
+Mothem Health/Armor:  70.0/87.0
+Dragon Health/Armor:  200.0/86.0
+Mothem Health/Armor:  70.0/86.0
+Dragon Health/Armor:  200.0/85.0
+Mothem Health/Armor:  70.0/85.0
+Dragon Health/Armor:  200.0/84.0
+Mothem Health/Armor:  70.0/84.0
+Dragon Health/Armor:  200.0/83.0
+Mothem Health/Armor:  70.0/83.0
+Dragon Health/Armor:  200.0/82.0
+Mothem Health/Armor:  70.0/82.0
+Dragon Health/Armor:  200.0/81.0
+Mothem Health/Armor:  70.0/81.0
+Dragon Health/Armor:  200.0/80.0
+Mothem Health/Armor:  70.0/80.0
+Dragon Health/Armor:  200.0/79.0
+Mothem Health/Armor:  70.0/79.0
+Dragon Health/Armor:  200.0/78.0
+Mothem Health/Armor:  70.0/78.0
+Dragon Health/Armor:  200.0/77.0
+Mothem Health/Armor:  70.0/77.0
+Dragon Health/Armor:  200.0/76.0
+Mothem Health/Armor:  70.0/76.0
+Dragon Health/Armor:  200.0/75.0
+Mothem Health/Armor:  70.0/75.0
+Dragon Health/Armor:  200.0/74.0
+Mothem Health/Armor:  70.0/74.0
+Dragon Health/Armor:  200.0/73.0
+Mothem Health/Armor:  70.0/73.0
+Dragon Health/Armor:  200.0/72.0
+Mothem Health/Armor:  70.0/72.0
+Dragon Health/Armor:  200.0/71.0
+Mothem Health/Armor:  70.0/71.0
+Dragon Health/Armor:  200.0/70.0
+Mothem Health/Armor:  70.0/70.0
+Dragon Health/Armor:  200.0/69.0
+Mothem Health/Armor:  70.0/69.0
+Dragon Health/Armor:  200.0/68.0
+Mothem Health/Armor:  70.0/68.0
+Dragon Health/Armor:  200.0/67.0
+Mothem Health/Armor:  70.0/67.0
+Dragon Health/Armor:  200.0/66.0
+Mothem Health/Armor:  70.0/66.0
+Dragon Health/Armor:  200.0/65.0
+Mothem Health/Armor:  70.0/65.0
+Dragon Health/Armor:  200.0/64.0
+Mothem Health/Armor:  70.0/64.0
+Dragon Health/Armor:  200.0/63.0
+Mothem Health/Armor:  70.0/63.0
+Dragon Health/Armor:  200.0/62.0
+Mothem Health/Armor:  70.0/62.0
+Dragon Health/Armor:  200.0/61.0
+Mothem Health/Armor:  70.0/61.0
+Dragon Health/Armor:  200.0/60.0
+Mothem Health/Armor:  70.0/60.0
+Dragon Health/Armor:  200.0/59.0
+Mothem Health/Armor:  70.0/59.0
+Dragon Health/Armor:  200.0/58.0
+Mothem Health/Armor:  70.0/58.0
+Dragon Health/Armor:  200.0/57.0
+Mothem Health/Armor:  70.0/57.0
+Dragon Health/Armor:  200.0/56.0
+Mothem Health/Armor:  70.0/56.0
+Dragon Health/Armor:  200.0/55.0
+Mothem Health/Armor:  70.0/55.0
+Dragon Health/Armor:  200.0/54.0
+Mothem Health/Armor:  70.0/54.0
+Dragon Health/Armor:  200.0/53.0
+Mothem Health/Armor:  70.0/53.0
+Dragon Health/Armor:  200.0/52.0
+Mothem Health/Armor:  70.0/52.0
+Dragon Health/Armor:  200.0/51.0
+Mothem Health/Armor:  70.0/51.0
+Dragon Health/Armor:  200.0/50.0
+Mothem Health/Armor:  70.0/50.0
+Dragon Health/Armor:  200.0/49.0
+Mothem Health/Armor:  70.0/49.0
+Dragon Health/Armor:  200.0/48.0
+Mothem Health/Armor:  70.0/48.0
+Dragon Health/Armor:  200.0/47.0
+Mothem Health/Armor:  70.0/47.0
+Dragon Health/Armor:  200.0/46.0
+Mothem Health/Armor:  70.0/46.0
+Dragon Health/Armor:  200.0/45.0
+Mothem Health/Armor:  70.0/45.0
+Dragon Health/Armor:  200.0/44.0
+Mothem Health/Armor:  70.0/44.0
+Dragon Health/Armor:  200.0/43.0
+Mothem Health/Armor:  70.0/43.0
+Dragon Health/Armor:  200.0/42.0
+Mothem Health/Armor:  70.0/42.0
+Dragon Health/Armor:  200.0/41.0
+Mothem Health/Armor:  70.0/41.0
+Dragon Health/Armor:  200.0/40.0
+Mothem Health/Armor:  70.0/40.0
+Dragon Health/Armor:  200.0/39.0
+Mothem Health/Armor:  70.0/39.0
+Dragon Health/Armor:  200.0/38.0
+Mothem Health/Armor:  70.0/38.0
+Dragon Health/Armor:  200.0/37.0
+Mothem Health/Armor:  70.0/37.0
+Dragon Health/Armor:  200.0/36.0
+Mothem Health/Armor:  70.0/36.0
+Dragon Health/Armor:  200.0/35.0
+Mothem Health/Armor:  70.0/35.0
+Dragon Health/Armor:  200.0/34.0
+Mothem Health/Armor:  70.0/34.0
+Dragon Health/Armor:  200.0/33.0
+Mothem Health/Armor:  70.0/33.0
+Dragon Health/Armor:  200.0/32.0
+Mothem Health/Armor:  70.0/32.0
+Dragon Health/Armor:  200.0/31.0
+Mothem Health/Armor:  70.0/31.0
+Dragon Health/Armor:  200.0/30.0
+Mothem Health/Armor:  70.0/30.0
+Dragon Health/Armor:  200.0/29.0
+Mothem Health/Armor:  70.0/29.0
+Dragon Health/Armor:  200.0/28.0
+Mothem Health/Armor:  70.0/28.0
+Dragon Health/Armor:  200.0/27.0
+Mothem Health/Armor:  70.0/27.0
+Dragon Health/Armor:  200.0/26.0
+Mothem Health/Armor:  70.0/26.0
+Dragon Health/Armor:  200.0/25.0
+Mothem Health/Armor:  70.0/25.0
+Dragon Health/Armor:  200.0/24.0
+Mothem Health/Armor:  70.0/24.0
+Dragon Health/Armor:  200.0/23.0
+Mothem Health/Armor:  70.0/23.0
+Dragon Health/Armor:  200.0/22.0
+Mothem Health/Armor:  70.0/22.0
+Dragon Health/Armor:  200.0/21.0
+Mothem Health/Armor:  70.0/21.0
+Dragon Health/Armor:  200.0/20.0
+Mothem Health/Armor:  70.0/20.0
+Dragon Health/Armor:  200.0/19.0
+Mothem Health/Armor:  70.0/19.0
+Dragon Health/Armor:  200.0/18.0
+Mothem Health/Armor:  70.0/18.0
+Dragon Health/Armor:  200.0/17.0
+Mothem Health/Armor:  70.0/17.0
+Dragon Health/Armor:  200.0/16.0
+Mothem Health/Armor:  70.0/16.0
+Dragon Health/Armor:  200.0/15.0
+Mothem Health/Armor:  70.0/15.0
+Dragon Health/Armor:  200.0/14.0
+Mothem Health/Armor:  70.0/14.0
+Dragon Health/Armor:  200.0/13.0
+Mothem Health/Armor:  70.0/13.0
+Dragon Health/Armor:  200.0/12.0
+Mothem Health/Armor:  70.0/12.0
+Dragon Health/Armor:  200.0/11.0
+Mothem Health/Armor:  70.0/11.0
+Dragon Health/Armor:  200.0/10.0
+Mothem Health/Armor:  70.0/10.0
+Dragon Health/Armor:  200.0/9.0
+Mothem Health/Armor:  70.0/9.0
+Dragon Health/Armor:  200.0/8.0
+Mothem Health/Armor:  70.0/8.0
+Dragon Health/Armor:  200.0/7.0
+Mothem Health/Armor:  70.0/7.0
+Dragon Health/Armor:  200.0/6.0
+Mothem Health/Armor:  70.0/6.0
+Dragon Health/Armor:  200.0/5.0
+Mothem Health/Armor:  70.0/5.0
+Dragon Health/Armor:  200.0/4.0
+Mothem Health/Armor:  70.0/4.0
+Dragon Health/Armor:  200.0/3.0
+Mothem Health/Armor:  70.0/3.0
+Dragon Health/Armor:  200.0/2.0
+Mothem Health/Armor:  70.0/2.0
+Dragon Health/Armor:  200.0/1.0
+Mothem Health/Armor:  70.0/1.0
+Dragon Health/Armor:  200.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  200.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  200.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  200.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  200.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  200.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  200.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  177.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  148.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  137.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  102.0/0.0
+Mothem Health/Armor:  70.0/0.0
+Dragon Health/Armor:  55.0/0.0
+Mothem Health/Armor:  50.0/0.0
+Dragon Health/Armor:  21.0/0.0
+Mothem Health/Armor:  30.0/0.0
+Dragon Health/Armor:  0.0/0.0
+Mothem Health/Armor:  10.0/0.0
+Dragon Died
