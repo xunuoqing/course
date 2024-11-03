@@ -1,0 +1,217 @@
+2022/12/13 18:44 E-ZPass 实验室：中期
+https://samueljbrannon.com/labs/ezpass/midterm.html 1/6
+E-ZPass实验室：中期
+2022/12/13 18:44 E-ZPass 实验室：中期
+https://samueljbrannon.com/labs/ezpass/midterm.html 2/6
+客观的
+您的项目是为沿256号公路的200次行程生成数据。回想一下，一次行程记录
+了高速公路的入口和出口。往返行程包括两次行程（总共四个记录），其中司
+机离开a，到达b，离开b，然后到达a。您必须编写代码来帮助您生成数据。每
+个人都会收到特别说明，以分解不同司机之间的行程。这些说明可能包括您的
+司机住在哪里、他们以什么为生、他们每周的例行公事是什么，或者关于他们
+生活的个人详细信息。您的个人指示将被严格保密！
+等级
+您的成绩满分100分。并将基于提交……
+包含格式正确的有效数据的电子表格（50分）
+包含用于生成数据的代码的Java文件（25分）
+你的工作准时。截止日期为12⽉15⽇星期四下午4:00（25分）
+组织起来
+您的共享文件夹应该已经有一个名为和 E-ZPass Lab 子文件夹的目
+录。如果您忘记执行此操作，请立即执行。 Part 1 Part 2
+2022/12/13 18:44 E-ZPass 实验室：中期
+https://samueljbrannon.com/labs/ezpass/midterm.html 3/6
+创建一个 E-ZPass Lab 名为的文件夹的子文件夹 Midterm 。您将在
+此处保存本部分实验的文件。
+资料要求
+仔细阅读这些说明。花时间充分了解它们将帮助您避免多次启动和
+重新启动数据。
+隐私：您的所有数据和特殊说明必须保密，不得与其他学生共享。这包括
+您可能发现或创造的任何独特或幽默的内容。实验室的第3部分将合并每
+个人的数据。分享您的说明可能会导致数据集不一致或破坏惊喜。
+逼真度：您的旅行应该反映真实世界的情况。没有人会在早上8:30:00准
+时出门并在上午9:00:00准时上班没有人会以65.0 mph的时速准确行驶。
+您应该编写代码来帮助您模拟这种随机性。
+司机限制
+司机档案：您将被分配为特定数量的司机创建记录，每个司机都必须
+有唯一的姓名和带有唯一车牌的车辆。
+通勤者行为：通勤者通常将时间花在上下班路上。在新底特律，没有
+一个通勤者居住在三个以上的工作出口（例如，住在芝加哥的司机可
+能向西工作到CostaNowhere，向东工作到Sam City）。其他类型的司
+机的出行方式可能不太可预测。
+安全驾驶，主要是：256号公路的限速为65英里/小时。州警认为安
+全的行驶速度是高于或低于限速5英里/小时。不超过5%的行程可以
+超过70mph的速度。不超过1%的行程可以低于65mph。
+时间限制
+使用真实日历：所有行程必须在2023年1月的实际日期进行。例如，
+如果您的一位司机周一至周五工作，则您的行程必须具有2023年1月
+工作日的正确编号。使用日历保持井井有条.
+没有多日行程：每次行程必须在同一天开始和结束。往返行程中的各
+个行程可能在不同的日子（例如，星期五去海滩，星期天回家）。
+2022/12/13 18:44 E-ZPass 实验室：中期
+https://samueljbrannon.com/labs/ezpass/midterm.html 4/6
+每日出行频率：一名司机同一天最多可有3次出行（6条记录）。多位
+司机可以在同一天出行（例如，3位司机同一天最多可以有9趟行
+程）。如果司机没有行程也没关系，只要这对您的司机来说是合乎逻
+辑的。
+严格遵守这些要求……确保您在开始工作之前了解上述要求。我们将在第3
+部分中合并数据，因此请务必严格遵守它们。这可确保第3部分的解决方
+案尽可能简单明了。
+…除⾮您的特殊说明覆盖：在某些情况下，您的特殊说明将覆盖这些要
+求。我正在查看每个人的数据，以找出这些与要求的偏差。每当您执行此
+操作时，请使用您数据中的评论字段来帮助我（见下文）。
+代码要求
+有一个名为的方法 getPlate() 以正确的格式生成随机车牌。
+有一个名为的方法 getOffTime() ，它获取旅行的开始时间（任何格
+式）、所需距离和所需速度，并生成（打印或返回）旅行的结束时间（任
+何格式）。
+理想情况下，您将使用代码来帮助您完成此过程。我要求你写200次旅
+行，因为我希望你专注于自动化这个过程的困难部分，而不是全部手动完
+成。
+上交什么
+您为生成数据而编写的Java文件，至少包括 getPlate() 和 getOffTime() .
+此Google表格的副本，其中所有空单元格均填充了数据。每个行程都是
+它自己的行，这就是为什么有200个空行的原因。每个单元格中的数据必
+须与列标题以及以下数据格式和约定相匹配：
+day 2023年1月的实际天数。例如，2023年1月5日，星期四，将记
+录为 5 。
+2022/12/13 18:44 E-ZPass 实验室：中期
+https://samueljbrannon.com/labs/ezpass/midterm.html 5/6
+onExit 车辆进入256号公路的出口编号。它必须是256号公路上的实
+际出口编号（见地图）。
+timeOn 车辆进入256号公路的时间，格式为 hhmmss .例如，在下午
+1:46:23进入的车辆将被记录为 134623 。
+offExit 车辆离开256号公路的出口编号。它必须是256号公路上的
+实际出口编号。
+timeOff 车辆离开256号公路的时间，格式为 hhmmss 。例如，一辆在
+凌晨12:57:33离开的车辆将被记录为 005733 。
+plate 高速公路上车辆的牌照格式 aaa-#### 。这些板应该由您的代
+码生成，除非您的特殊说明另有说明。
+customer 您可以选择任何客户名称，无论是真实的还是虚构的，只
+要它适合学校。它必须采用Firstname Lastname 格式。
+notes 在此处输入有关个人旅行的任何必要评论。谨慎使用注释；大
+多数旅行不应该有评论。使用此字段表示遵循特殊说明的行程。
+提示：如果您的代码按顺序输出这些值，用逗号分隔，那么您可以从
+jGRASP控制台复制/粘贴到电子表格。进入电子表格后，您可以转到“数
+据”>“将文本拆分为列”以将每个值放入正确的列中。
+2022/12/13 18:44 E-ZPass 实验室：中期
+https://samueljbrannon.com/labs/ezpass/midterm.html 6/6
+注：版权所有©2021–2022 Samuel J. Brannon。版本1.0；最后修订于2022年12
+月9日。未经作者许可，请勿分发或重复使用。图片由Unsplash提供。
+
+
+2022/12/13 18:43 E-ZPass Lab: Midterm
+https://samueljbrannon.com/labs/ezpass/midterm.html 1/6
+E-ZPass Lab: Midterm
+2022/12/13 18:43 E-ZPass Lab: Midterm
+https://samueljbrannon.com/labs/ezpass/midterm.html 2/6
+Objective
+Your project isto generate data for 200 trips along Route 256. Recall that one trip records
+an entrance on and exit of f the highway. A round trip consists of two trips(a total of four
+records) inwhich a driver leaves a, arrives at b, leaves b, and arrives at a. You mustwrite
+code to help you generate your data. Everyonewill receive special instructionsfor
+breaking down their trips among dif ferent drivers. These instructions may includewhere
+your driverslive,what they do for a living,what theirweekly routines are, or personal
+details about their lives. Your individual instructions are to be keptstrictly private!
+Grading
+Your grade is out of100 pts. andwill be based on submitting…
+A spreadsheetwith valid data in the correct format (50 pts.)
+Java fi leswith the code that you used to generate your data (25 pts.)
+Yourwork on time. The deadline is Thursday,December15 at 4:00 p.m. (25 pts.)
+Getting Organized
+Yourshared foldershould already have a directory called E-ZPass Lab with
+subfolderscalled Part 1 and Part 2 . If you forgot to do this, then do it
+now.
+2022/12/13 18:43 E-ZPass Lab: Midterm
+https://samueljbrannon.com/labs/ezpass/midterm.html 3/6
+Create a subfolder of the E-ZPass Lab foldercalled Midterm . Thisis
+where youwillsave your fi lesfor this part of the lab.
+DataRequirements
+Read these instructionscarefully. Taking the time to understand them fully
+will help you avoid having to start and restart your data multiple times.
+Privacy: All of your data and yourspecial instructions must be kept private and not
+sharedwith otherstudents. Thisincludes any distinctive or humorous you may fi nd
+orcreate. Part 3 of the labwillcombine everyone's data. Sharing your instructions
+may lead to an inconsistent dataset orspoilsurprises.
+Verisimilitude: Your tripsshould mirror real-world conditions.No one leaves home
+exactly at 8:30:00 a.m. and arrives atwork exactly at 9:00:00 a.m.No one drives
+exactly 65.0 mph. You shouldwrite code that helps you simulate thisrandomness.
+Driverrestrictions
+Driver profi les: Youwill be assigned to create recordsfor a specifi c number of
+drivers, each ofwhich must have a unique name and vehiclewith a unique
+license plate.
+Commuter behavior: Commuterstypically spend their time traveling to and
+from work.No commuter inNewDetroit lives more than three exitsfrom
+work (e.g., a driver living in Chicago maywork asfarwest as CostaNowhere
+and asfar east as Sam City). Other types of drivers may have less predictable
+travel patterns.
+Drivesafely, mostly: The speed limit on Route 256 is 65mph. State troopers
+consider a safe speed of travel to be 5mph above or belowthe speed limit.No
+more than 5% of your trips may go faster than 70mph.No more than 1% of
+your trips may go below65mph.
+Time restrictions
+2022/12/13 18:43 E-ZPass Lab: Midterm
+https://samueljbrannon.com/labs/ezpass/midterm.html 4/6
+Use a realcalendar: All trips must be on actual daysin the month of January
+2023. For example, if one of your driversworks Monday through Friday, your
+trips must have correct numbersforweekdaysin January 2023. Use a calendar
+to stay organized.
+No multi-day trips: Every trip muststart and end on the same day. The
+individual trips of a round trip may be on dif ferent days(e.g., leave for the
+beach Friday, return home Sunday).
+Daily travel frequency: One driver may have a maximum of 3 trips(6 records) on
+the same day. It is okay for multiple driversto travel on the same day (e.g., 3
+drivers may have a maximum of 9 trips on the same day). It is also okay if a
+driver has no trips aslong asthisislogical for your driver.
+Strictly follow these requirements… Make sure you understand the above
+requirements before you startworking. We are combining data in Part 3,so it is
+important that you followthem strictly. This ensuresthatsolutionsfor Part 3will be
+asstraightforward as possible.
+…except when yourspecial instructions override: In some cases, yourspecial
+instructionswill override these requirements. I am looking at each person's data to
+fi
+nd these deviationsfrom the requirements.Help me by using the comment fi eld
+in your datawhenever you do this(see below).
+CodeRequirements
+Have a method named getPlate() that generates a random license plate in the
+correct format.
+Have a method named getOffTime() that takes a trip'sstart time (in any format),
+a desired distance, and a desired speed and generates(either prints or returns) the
+trip's end time (in any format).
+Ideally, youwill use the code to assist you in this process. I am asking you towrite
+200 trips because Iwant you to focus on automating the hard parts of this process
+rather than doing it all manually.
+2022/12/13 18:43 E-ZPass Lab: Midterm
+https://samueljbrannon.com/labs/ezpass/midterm.html 5/6
+Whatto Turn in
+The Java fi les youwrite to generate your data, including at least getPlate() and
+getOffTime() .
+A copy of this Google Sheetwith all empty cells fi lledwith data. Each trip isits own
+row,which iswhy there are 200 empty rows. The data in each cell must match the
+column header and the following data formats and conventions:
+day The number of an actual day in January 2023. For example, Thursday,
+January 5, 2023would be recorded as 5 .
+onExit The exit number atwhich the vehicle entered Route 256. It must be
+an actual exit number on Route 256 (see map).
+timeOn The timewhen the vehicle entered Route 256 in the format hhmmss .
+For example, a vehicle entering at1:46:23 p.m.would be recorded as 134623 .
+offExit The exit number atwhich the vehicle lef t Route 256. It must be an
+actual exit number on Route 256.
+timeOff The timewhen the vehicle lef t Route 256 in the format hhmmss .
+For example, a vehicle leaving at12:57:33 a.m.would be recorded as 005733 .
+plate The license plate of the vehicle on the highway in the format aaa-
+#### . The platesshould be generated by yourcode, unless yourspecial
+instructionstell you otherwise.
+customer You may choose any customer name, real or fi ctional, aslong asit
+isschool-appropriate. It must be in the format Firstname Lastname.
+notes Enter any necessary comments about individual trips here. Use
+commentssparingly; most tripsshould not have a comment. Use this fi eld to
+indicate tripsthat followspecial instructions.
+hint: If yourcode outputsthese valuesin order,separated by commas, then you
+can copy/paste from the jGRASP console to the spreadsheet. Once in the
+spreadsheet, you can go to Data > Split text to columnsto put each value in the
+correctcolumn.
+2022/12/13 18:43 E-ZPass Lab: Midterm
+https://samueljbrannon.com/labs/ezpass/midterm.html 6/6
+notes: Copyright©2021–2022 Samuel J. Brannon. Version 1.0; last revised 9 December
+2022. Please do not distribute or reusewithoutsoliciting permission from the author.
+Image courtesy of Unsplash.
